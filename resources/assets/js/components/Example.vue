@@ -30,15 +30,15 @@
       <div class="container">
         <article class="col-md-8 col-xs-12">
           <section class="home-quiz__introduction">
-            <h2 id="what-is">
-              <img id="what-is-mark" src="/public/images/what-is-mark.png" />4 Answers Quizとは?
+            <h2 class="home-quiz__introduction-h2">
+              <img class="home-quiz__introduction-h2-logo" src="/public/images/what-is-mark.png" />4 Answers Quizとは?
             </h2>
             <p>4 Answers Quizとはビジネスマナーから一般常識に至るまで様々なクイズを4択で出題するWEBアプリです。</p>
             <p>何度もトライしてみて正解率100%を目指してみてください。</p>
           </section>
           <section class="home-quiz__setting">
-            <h2 id="directory">
-              <img id="directory-mark" src="/public/images/directory-icon.png" />出題設定
+            <h2 class="home-quiz__setting-h2">
+              <img class="home-quiz__setting-h2-logo" src="/public/images/directory-icon.png" />出題設定
             </h2>
             <form action method="post">
               <label>
@@ -69,8 +69,8 @@
             </form>
           </section>
           <section class="home-quiz__ranking">
-            <h2 id="graph">
-              <img id="graph-mark" src="/public/images/graph-icon.png" />ランキング
+            <h2 class="home-quiz__ranking-h2">
+              <img class="home-quiz__ranking-h2-logo" src="/public/images/graph-icon.png" />ランキング
             </h2>
             <div>
               <label>
@@ -86,8 +86,8 @@
             <canvas id="chart" height="200" width="400"></canvas>
           </section>
           <section class="home__notice">
-            <h2 id="news">
-              <img id="news-mark" src="/public/images/news-icon.png" />お知らせ情報
+            <h2 class="home__notice-h2">
+              <img class="home__notice-h2-logo" src="/public/images/news-icon.png" />お知らせ情報
             </h2>
             <dl>
               <dt>2019/08/23</dt>
@@ -100,11 +100,21 @@
 
     <footer>
       <div class="container text-center">
-        <small>© 2019 4Answers-quiz. All rights reserved.</small>
+        <small>© {{nowYear}} 4Answers-quiz. All rights reserved.</small>
       </div>
     </footer>
   </div>
 </template>
 
 <script>
+export default {
+	data() {
+		return {
+			nowYear: ''
+		}
+	},
+	mounted() {
+		this.nowYear = new Date().getFullYear();
+	},
+}
 </script>
