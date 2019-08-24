@@ -1,0 +1,23 @@
+main {
+  padding-top: 20px;
+  background: #C2CBD3;
+  padding-bottom: 50px;
+  min-height: 1000px;
+}
+
+.home {
+	&-quiz{
+		&__introduction {
+			padding: 5px 10px
+		}
+		&__setting {
+			padding: 5px 10px
+		}
+		&__ranking {
+			padding: 5px 10px
+		}
+	}
+	&__notice {
+		padding: 5px 10px
+	}
+}
