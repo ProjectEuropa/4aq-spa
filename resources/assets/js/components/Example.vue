@@ -2,7 +2,7 @@
   <div>
     <header>
       <div class="container text-center">
-        <h1>Quiz 4択クイズ&クイズ徹底解説</h1>
+        <h1>4 Answers Quiz 4択クイズ&クイズ徹底解説</h1>
         <a href="/">
           <img class="header-nav__logo" src="/public/images/header-logo.png" />
         </a>
@@ -10,24 +10,34 @@
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" id="home" href="/">ホーム</a>
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-ex-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="header-nav__home" href="/">ホーム</a>
           </div>
-          <div class="navbar-header">
-            <ul class="nav navbar-right">
+          <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-nav navbar-right">
               <li>
-                <a class="navbar-brand header-nav__home" href="/login">ログイン</a>
+                <a id="header-nav__login" href="/login">ログイン</a>
               </li>
               <li>
-                <a class="navbar-brand header-nav__register" href="/register">ユーザー登録</a>
+                <a id="header-nav__register" href="/register">ユーザー登録</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
     <main>
-      <div class="container d-flex">
+      <div class="container">
         <article class="col-md-8 col-xs-12">
           <section class="home-quiz__introduction">
             <h2 class="home-quiz__introduction-h2">
@@ -45,19 +55,19 @@
                 <input type="checkbox" name="categories[]" value="1" checked />ビジネスマナー
               </label>
               <label>
-                <input type="checkbox" name="categories[]" value="1" checked />一般常識
+                <input type="checkbox" name="categories[]" value="2" />一般常識
               </label>
               <label>
-                <input type="checkbox" name="categories[]" value="1" checked />就職・転職
+                <input type="checkbox" name="categories[]" value="3" />就職・転職
               </label>
               <label>
-                <input type="checkbox" name="categories[]" value="1" checked />法律
+                <input type="checkbox" name="categories[]" value="4" />法律
               </label>
               <label>
-                <input type="checkbox" name="categories[]" value="1" checked />IT
+                <input type="checkbox" name="categories[]" value="5" />IT
               </label>
               <label>
-                <input type="checkbox" name="categories[]" value="1" checked />雑学
+                <input type="checkbox" name="categories[]" value="6" />雑学
               </label>
               <div class>
                 全項目チェック
@@ -83,9 +93,9 @@
                 <input class="ranking-radio" type="radio" name="ranking-radio" value="3" />今週
               </label>
             </div>
-						<section class="home_quiz__ranking-chart">
-							<chart />
-						</section>
+            <section class="home_quiz__ranking-chart">
+              <chart />
+            </section>
             <!-- <canvas id="chart" height="200" width="400"></canvas> -->
           </section>
           <section class="home__notice">
@@ -98,11 +108,11 @@
             </dl>
           </section>
         </article>
-        <aside class="col-md-5 col-xs-12">
+        <aside class="col-md-4 col-xs-12">
           <section id="sns-sections">
-            <h3 class="text-center sidebar">SNS共有</h3>
-            <!---<div id="sns-links">
-              <a>
+            <h3 class="text-center sidebar-sns-h3">SNS共有</h3>
+            <div class="sidebar_sns-links">
+              <!-- <a>
                 <div
                   class="g-plus"
                   data-action="share"
@@ -110,56 +120,39 @@
                   data-annotation="bubble"
                   data-href="http://syncer.jp/"
                 ></div>
-              </a>
-              <a
-                href="https://twitter.com/share"
-                class="twitter-share-button"
-                data-size="middle"
-              >Tweet</a>
-              <script>
-  !(function(d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0],
-      p = /^http:/.test(d.location) ? "http" : "https";
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = p + "://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-  })(document, "script", "twitter-wjs");
-              </script>
-              <a
-                href="http://b.hatena.ne.jp/"
-                class="hatena-bookmark-button"
-                data-hatena-bookmark-title="Syncer"
-                data-hatena-bookmark-layout="vertical-balloon"
-                data-hatena-bookmark-lang="ja"
-                title="このエントリーをはてなブックマークに追加"
-              >
-                <img
-                  src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
-                  alt="このエントリーをはてなブックマークに追加"
-                  width="20"
-                  height="20"
-                  style="border: none;"
-                />
-              </a>
-              <a>
-                <div
-                  class="fb-like"
-                  data-href
-                  data-layout="button_count"
-                  data-action="like"
-                  data-show-faces="true"
-                  data-share="false"
-                ></div>
-              </a>
-              フェイスブックリンク先を修正すること
-            </div>-->
+              </a>-->
+              <social-sharing url title="shareボタン" inline-template>
+                <div class="twitter__share">
+                  <network network="twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing url title="shareボタン" inline-template>
+                <div class="facebook__share">
+                  <network network="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing url title="shareボタン" inline-template>
+                <div class="line__share">
+                  <network network="line">
+                    <i class="fab fa-line"></i> Line
+                  </network>
+                </div>
+              </social-sharing>
+              <social-sharing url title="shareボタン" inline-template>
+                <div class="google__share">
+                  <network network="googleplus">
+                    <i class="fab fa-google"></i> google
+                  </network>
+                </div>
+              </social-sharing>
+            </div>
           </section>
-          <section id="keywords">
-            <h3 class="text-center sidebar">キーワード集</h3>
+          <section class="sidebar-keywords">
+            <h3 class="text-center sidebar-keywords-h3">キーワード集</h3>
             <ul class="keywords-texts-str-li">
               <li>
                 <a href="/keyword?initial=A">Ａ</a>
@@ -256,7 +249,7 @@
 
     <footer>
       <div class="container text-center">
-        <small>© {{nowYear}} 4Answers-quiz. All rights reserved.</small>
+        <small>© {{new Date().getFullYear()}} 4Answers-quiz. All rights reserved.</small>
       </div>
     </footer>
   </div>
@@ -266,16 +259,13 @@
 import Chart from "./BarChart";
 
 export default {
-	components: {
-		Chart,
-	},
+  components: {
+    Chart
+  },
   data() {
-    return {
-      nowYear: ""
-    };
+    return {};
   },
   mounted() {
-    this.nowYear = new Date().getFullYear();
     // this.renderChart(
     //   {
     //     labels: ["January", "February", "March", "April", "May"],
@@ -288,8 +278,8 @@ export default {
     //     ]
     //   },
     //   {
-		// 		responsive: true
-		// 	}
+    // 		responsive: true
+    // 	}
     // );
   }
 };

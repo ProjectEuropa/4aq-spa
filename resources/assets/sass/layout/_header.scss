@@ -14,10 +14,26 @@ header {
 	}
 
 	.header {
+
 		&-nav__logo {
 			width: 200px;
 			margin-top: -15px;
 		}
 	}
+
+	#header {
+		&-nav {
+			&__home {
+				color: $white;
+			}
+			&__login {
+				color: $white;
+			}
+			&__register {
+				color: $white;
+			}
+		}
+	}
 }
+
 

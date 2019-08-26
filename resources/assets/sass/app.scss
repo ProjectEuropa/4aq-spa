@@ -5,25 +5,17 @@
 //@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
-@import '~bootstrap/scss/bootstrap';
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "setting/_variables";
 @import "layout/_header";
 @import "layout/_footer";
 @import "layout/_layout";
+@import "module/_button";
+@import "module/_sidebar";
 @import "pages/_home";
 
 
-
-
-
-
-// .navbar-default .navbar-nav>li>a {
-//   color: #ffffff;
-// }
-
-#home:hover {
-  color: #333;
-}
 
 article,
 #sns-sections,
