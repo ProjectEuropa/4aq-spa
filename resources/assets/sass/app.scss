@@ -8,13 +8,14 @@
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "setting/_variables";
+@import "setting/_media";
 @import "layout/_header";
 @import "layout/_footer";
 @import "layout/_layout";
 @import "module/_button";
 @import "module/_sidebar";
 @import "pages/_home";
-
+@import "pages/_quiz";
 
 
 article,
@@ -50,15 +51,15 @@ ul.keywords-texts-str-li li a {
   margin-left: 15px;
 }
 
-article {
-  width: 60%;
-}
+// article {
+//   width: 60%;
+// }
 
-.sidebar {
-  background: #a3c0da;
-  margin: 0px auto;
-  padding: 10px;
-}
+// .sidebar {
+//   background: #a3c0da;
+//   margin: 0px auto;
+//   padding: 10px;
+// }
 
 #correct,
 #commentary,
